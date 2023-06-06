@@ -10,6 +10,7 @@ class WebviewMainController extends GetxController {
   static WebviewMainController get to => Get.find();
 
   static var controller = WebViewController()
+    ..enableZoom(false)
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(const Color(0x00000000))
     ..setNavigationDelegate(
@@ -36,8 +37,8 @@ class WebviewMainController extends GetxController {
           }
         }
     )
-    ..loadRequest(Uri.parse('https://www.dev.uspray.kr'))
-    ..enableZoom(false);
+    ..loadRequest(Uri.parse('https://www.dev.uspray.kr'));
+
 
 
   WebViewController getController() {
